@@ -1,0 +1,8 @@
+package com.innov.order.dao;
+
+import java.util.List;
+
+public interface BaseDao {
+
+    public List findAll() ;
+}
