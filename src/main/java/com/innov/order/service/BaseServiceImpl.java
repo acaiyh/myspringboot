@@ -16,4 +16,9 @@ public class BaseServiceImpl implements BaseService {
     public List findAll() {
        return baseDao.findAll() ;
     }
+
+    @Override
+    public List findOrderById(String id) {
+        return baseDao.findOrderById(id);
+    }
 }

@@ -21,4 +21,10 @@ public class BaseActionImpl implements BaseAction {
         System.out.println("success") ;
         return baseService.findAll() ;
     }
+
+    @Override
+    @RequestMapping(value = "orderById",method = RequestMethod.GET)
+    public List findOrderById(String id) {
+        return baseService.findOrderById(id);
+    }
 }

@@ -16,4 +16,10 @@ public class BaseDaoImpl implements BaseDao{
     public List findAll() {
         return jdbcTemplate.queryForList("SELECT * FROM  ORDERS ") ;
     }
+
+    @Override
+    public List findOrderById(String id) {
+        String sql = "select * from orders o where o.order_id = ? " ;
+        return jdbcTemplate.queryForList(sql,id) ;
+    }
 }
